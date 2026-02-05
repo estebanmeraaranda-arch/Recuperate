@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  background-color: #ffffff; /* Fondo blanco */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* El diseño tipo Stardew Valley original */
+.stardew-box {
+  width: 600px;
+  min-height: 120px;
+  background-color: #e6b37a;
+  padding: 20px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border: 4px solid #5d3a1a; 
+  outline: 4px solid #b27b43;
+  border-radius: 4px;
+  box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #3a2211;
+  display: none;
+}
+
+.stardew-box.active { display: block; }
+
+/* --- CONTENEDOR GENERAL DE IMÁGENES (1, 2 y 3) --- */
+.portrait-container {
+  position: absolute;
+  display: flex;
+  background: transparent; /* Sin recuadro */
+  
+  /* AJUSTA AQUÍ LA POSICIÓN DE LAS IMÁGENES 1, 2 Y 3 */
+  top: -199px;  /* Altura respecto al diálogo */
+  left: 410px;  /* Posición lateral */
+  width: 250px;
+  height: 250px;
+}
+
+/* --- CLASE INDEPENDIENTE PARA LA IMAGEN 4 --- */
+.portrait-container.image-4-special {
+  /* AJUSTA AQUÍ LA POSICIÓN SOLO PARA LA IMAGEN 4 */
+  top: -230px;  /* Ejemplo: más arriba que las otras */
+  left: 410px;  /* Ejemplo: a la derecha del todo */
+  width: 250px; /* Ejemplo: más grande */
+}
+
+.portrait-container img {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated; /* Mantiene estilo pixel art */
+}
+
+#text-content {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: #5d3a1a;
+  font-size: 24px;
+  animation: bounce 0.8s infinite;
+}
+
+.hidden { display: none; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
