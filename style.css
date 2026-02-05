@@ -77,3 +77,63 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
 }
+/* Botón estilo Stardew */
+.stardew-button {
+  position: absolute;
+  bottom: -60px; /* Lo pone justo debajo de la caja de diálogo */
+  right: 0;
+  background-color: #e6b37a;
+  border: 3px solid #5d3a1a;
+  outline: 3px solid #b27b43;
+  color: #3a2211;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+}
+
+.stardew-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+
+/* Ajuste para que el texto tenga espacio y no choque con la flecha */
+#text-content {
+  padding-right: 30px;
+}
+/* --- AJUSTES PARA CELULAR --- */
+@media (max-width: 600px) {
+  .stardew-box {
+    width: 85%;          /* La caja ocupará el 85% del ancho de la pantalla */
+    min-height: 80px;    /* Un poco más baja */
+    padding: 15px;       /* Menos espacio interno */
+    bottom: 20px;        /* Más cerca del borde inferior */
+    font-size: 20px;     /* Letra más pequeña para que quepa el texto */
+  }
+
+  #text-content {
+    font-size: 22px;     /* Tamaño de la letra del diálogo en móvil */
+    padding-right: 20px;
+  }
+
+  .portrait-container {
+    width: 80px;         /* Retrato más pequeño en móvil */
+    height: 80px;
+    top: -70px;          /* Ajuste para que no flote tan alto */
+  }
+
+  /* Ajuste para la imagen 4 especial en móvil */
+  .portrait-container.image-4-special {
+    top: -100px;
+    left: 60%;           /* La movemos proporcionalmente */
+    width: 100px;
+  }
+
+  .stardew-button {
+    bottom: -50px;       /* Botón más cerca de la caja */
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
